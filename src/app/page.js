@@ -2,15 +2,10 @@ import Categories from '@/components/Categories';
 import MoreProfile from '@/components/MoreProfile'
 import ProductCard from '@/components/ProductCard'
 import Profile from '@/components/Profile'
-import Silde from '@/components/Slide';
 
-export const metadata = {
-  title: 'iOdINN-home',
-  description: 'Mini-project that focus on SEO',
-}
 
 export async function getProducts (){
-  const res = await fetch ('https://api.escuelajs.co/api/v1/products?limit=20&offset=103')
+  const res = await fetch ('https://api.escuelajs.co/api/v1/products?limit=20&offset=1')
   const products = await res.json();
   return products;
 }
@@ -22,7 +17,7 @@ export async function getUsers (){
 }
 
 export async function getCategories (){
-  const res = await fetch ('https://api.escuelajs.co/api/v1/categories?limit=22')
+  const res = await fetch ('https://api.escuelajs.co/api/v1/categories')
   const categories = await res.json();
   return categories;
 }
@@ -58,7 +53,6 @@ export default async function Home() {
         ))
       }
     </div>
-    <Silde/>
     <h1 className='text-3xl font-bold  text-white ms-5'>Products</h1>
     <div className='flex justify-evenly flex-wrap mt-10'>
       {
@@ -79,6 +73,7 @@ export default async function Home() {
         categories.map((categories)=>(
           <Categories
             key={categories.id}
+            id= {categories.id}
             image={categories.image}
             name = {categories.name}
           />
