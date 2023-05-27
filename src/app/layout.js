@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: {
-      template: '%s | Odinn'
+      template: '%s - Odinn'
   },
   description: "Odinn is a website that provide online shoping to customer, Experience the convenience, quality, and exceptional service",
   openGraph: {

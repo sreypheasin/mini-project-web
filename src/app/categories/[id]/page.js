@@ -1,6 +1,10 @@
 import React from 'react'
 import ProductCard from '@/components/ProductCard';
 
+export const metadata ={
+  title : `catecory`
+}
+
 async function getCategories(id,name){
     const res = await fetch(`https://api.escuelajs.co/api/v1/categories/${id}/products`)
     const products = res.json();

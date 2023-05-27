@@ -6,7 +6,7 @@ export default function Categories({id,image,name}) {
 
 <div className="w-60 max-w-sm mb-10 rounded-lg shadow dark:bg-base-100 opacity-70 hover:opacity-100 shadow-md">
     <Link href={`/categories/${id}`}>
-        <img className="rounded-t-lg h-32 w-80 object-cover" src={image? image: 'https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg'} alt="" />
+        <img className="rounded-t-lg h-32 w-80 object-cover" src={image? image: 'https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg'} alt="category" />
     </Link>
     <div className="p-4">
         <Link href="#">

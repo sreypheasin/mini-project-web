@@ -3,6 +3,9 @@ import MoreProfile from '@/components/MoreProfile'
 import ProductCard from '@/components/ProductCard'
 import Profile from '@/components/Profile'
 
+export const metadata ={
+  title : "home - odinn"
+}
 
 export async function getProducts (){
   const res = await fetch ('https://api.escuelajs.co/api/v1/products?limit=20&offset=1')
